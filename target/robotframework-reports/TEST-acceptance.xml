@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0" skip="0" tests="6" name="Acceptance" errors="0">
+<testcase classname="Acceptance.TestCase 01" name="Showing custom keyword" time="0">
+</testcase>
+<testcase classname="Acceptance.TestCase 01" name="Open google and search,verify search item is displayed on search result" time="21">
+</testcase>
+<testcase classname="Acceptance.TestCase 01" name="Title should be Robot Framework" time="0">
+</testcase>
+<testcase classname="Acceptance.TestCase 01" name="Match header title to Robot Framework" time="0">
+</testcase>
+<testcase classname="Acceptance.TestCase 01" name="Location should be Robot framework web adress" time="0">
+</testcase>
+<testcase classname="Acceptance.TestCase 01" name="Closing the browser" time="1">
+</testcase>
+</testsuite>

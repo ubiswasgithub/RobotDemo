@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Jython 2.7.0 on java1.8.0_111)" generated="20171020 19:04:47.304">
+<suite source="C:\Users\ubiswas\workspace\ub.robot\src\test\robotframework\acceptance" name="Acceptance" id="s1">
+<suite source="C:\Users\ubiswas\workspace\ub.robot\src\test\robotframework\acceptance\TestCase_01.robot" name="TestCase 01" id="s1-s1">
+<test name="Showing custom keyword" id="s1-s1-t1">
+<kw name="Hello custom keyword">
+<kw library="robotdemo.ub.robot.SearchKeyWords" name="Hello">
+<arguments>
+<arg>world</arg>
+</arguments>
+<status endtime="20171020 19:04:48.272" starttime="20171020 19:04:48.270" status="PASS"></status>
+</kw>
+<status endtime="20171020 19:04:48.274" starttime="20171020 19:04:48.267" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171020 19:04:48.275" starttime="20171020 19:04:48.263" status="PASS"></status>
+</test>
+<test name="Open google and search,verify search item is displayed on search result" id="s1-s1-t2">
+<kw name="Open browser and search">
+<kw library="Selenium2Library" name="Open Browser">
+<doc>Opens a new browser instance to given URL.&lt;br&gt;</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:04:48.286">browserName: chrome</msg>
+<msg level="INFO" timestamp="20171020 19:04:48.288">Opening browser 'chrome' to base url 'https://www.google.com'</msg>
+<msg level="INFO" timestamp="20171020 19:04:58.736">Starting ChromeDriver 2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a) on port 5320
+Only local connections are allowed.</msg>
+<status endtime="20171020 19:04:58.737" starttime="20171020 19:04:48.280" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Maximize Browser Window">
+<doc>Maximizes current browser window.&lt;br&gt;</doc>
+<status endtime="20171020 19:04:59.873" starttime="20171020 19:04:58.738" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Title Should Be">
+<doc>Verify the current page title is exactly &lt;b&gt;title&lt;/b&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;title&lt;/b&gt;&amp;nbsp;The title to verify.&lt;br&gt;&lt;br&gt;&lt;b&gt;See Also:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Title Should Not Be`&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Title Should Contain`&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Title Should Not Contain`&lt;br&gt;</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:04:59.885">Page title is 'Google'.</msg>
+<status endtime="20171020 19:04:59.886" starttime="20171020 19:04:59.874" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Be Enabled">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; is enabled.&lt;br&gt;</doc>
+<arguments>
+<arg>css=input#lst-ib</arg>
+</arguments>
+<status endtime="20171020 19:04:59.952" starttime="20171020 19:04:59.887" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click on the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>css=input#lst-ib</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:04:59.956">Clicking element 'css=input#lst-ib'.</msg>
+<status endtime="20171020 19:05:00.010" starttime="20171020 19:04:59.953" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Input Text">
+<doc>Types the given &lt;b&gt;text&lt;/b&gt; into the text field identified by</doc>
+<arguments>
+<arg>css=input#lst-ib</arg>
+<arg>${searchItem}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:00.013">Typing text 'robot framework' into text field 'css=input#lst-ib'</msg>
+<status endtime="20171020 19:05:00.096" starttime="20171020 19:05:00.010" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click on the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>css=div#lga</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:00.100">Clicking element 'css=div#lga'.</msg>
+<status endtime="20171020 19:05:00.161" starttime="20171020 19:05:00.097" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click on the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>name=btnK</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:00.164">Clicking element 'name=btnK'.</msg>
+<status endtime="20171020 19:05:01.032" starttime="20171020 19:05:00.162" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Link">
+<doc>Click on the link identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>link=Robot Framework</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:01.037">Clicking link 'link=Robot Framework'.</msg>
+<status endtime="20171020 19:05:01.217" starttime="20171020 19:05:01.033" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Page Should Contain">
+<doc>Verify the current page contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>Robotframework</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:08.876">Page Should Contain: Robotframework =&gt; OK</msg>
+<status endtime="20171020 19:05:08.878" starttime="20171020 19:05:01.218" status="PASS"></status>
+</kw>
+<status endtime="20171020 19:05:08.878" starttime="20171020 19:04:48.279" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171020 19:05:08.879" starttime="20171020 19:04:48.277" status="PASS"></status>
+</test>
+<test name="Title should be Robot Framework" id="s1-s1-t3">
+<kw name="Matched Page Title">
+<kw library="Selenium2Library" name="Title Should Be">
+<doc>Verify the current page title is exactly &lt;b&gt;title&lt;/b&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;title&lt;/b&gt;&amp;nbsp;The title to verify.&lt;br&gt;&lt;br&gt;&lt;b&gt;See Also:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Title Should Not Be`&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Title Should Contain`&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Title Should Not Contain`&lt;br&gt;</doc>
+<arguments>
+<arg>Robot Framework</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:08.909">Page title is 'Robot Framework'.</msg>
+<status endtime="20171020 19:05:08.910" starttime="20171020 19:05:08.887" status="PASS"></status>
+</kw>
+<status endtime="20171020 19:05:08.911" starttime="20171020 19:05:08.885" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171020 19:05:08.912" starttime="20171020 19:05:08.882" status="PASS"></status>
+</test>
+<test name="Match header title to Robot Framework" id="s1-s1-t4">
+<kw name="Matched header title">
+<kw library="robotdemo.ub.robot.SearchKeyWords" name="Header">
+<arguments>
+<arg>Robot framework</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:08.987">ROBOT FRAMEWORK
+Generic test automation framework for acceptance testing and ATDD</msg>
+<status endtime="20171020 19:05:08.988" starttime="20171020 19:05:08.918" status="PASS"></status>
+</kw>
+<status endtime="20171020 19:05:08.988" starttime="20171020 19:05:08.917" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171020 19:05:08.989" starttime="20171020 19:05:08.914" status="PASS"></status>
+</test>
+<test name="Location should be Robot framework web adress" id="s1-s1-t5">
+<kw name="Matched Location">
+<kw library="Selenium2Library" name="Location Should Be">
+<doc>Verify the current page URL is exactly &lt;b&gt;url&lt;/b&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;url&lt;/b&gt;&amp;nbsp;The URL to verify.&lt;br&gt;&lt;br&gt;&lt;b&gt;See Also:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Location Should Contain`&lt;br&gt;</doc>
+<arguments>
+<arg>${ROBOT_URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171020 19:05:09.004">Current location is 'http://robotframework.org/'.</msg>
+<status endtime="20171020 19:05:09.006" starttime="20171020 19:05:08.993" status="PASS"></status>
+</kw>
+<status endtime="20171020 19:05:09.007" starttime="20171020 19:05:08.992" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171020 19:05:09.008" starttime="20171020 19:05:08.990" status="PASS"></status>
+</test>
+<test name="Closing the browser" id="s1-s1-t6">
+<kw name="Close all browser">
+<kw library="Selenium2Library" name="Close Browser">
+<doc>Closes the current browser instance.&lt;br&gt;&lt;br&gt;&lt;b&gt;See Also:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Close All Browsers`&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Open Browser`&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Switch Browser`&lt;br&gt;</doc>
+<status endtime="20171020 19:05:10.358" starttime="20171020 19:05:09.013" status="PASS"></status>
+</kw>
+<status endtime="20171020 19:05:10.359" starttime="20171020 19:05:09.012" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171020 19:05:10.360" starttime="20171020 19:05:09.010" status="PASS"></status>
+</test>
+<doc>A resource file containing the application specific keywords</doc>
+<status endtime="20171020 19:05:10.366" starttime="20171020 19:04:47.698" status="PASS"></status>
+</suite>
+<status endtime="20171020 19:05:10.382" starttime="20171020 19:04:47.315" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" name="Acceptance" id="s1">Acceptance</stat>
+<stat pass="6" fail="0" name="TestCase 01" id="s1-s1">Acceptance.TestCase 01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
